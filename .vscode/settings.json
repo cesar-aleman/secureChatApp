@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "us-cdbr-east-05.cleardb.net",
+            "port": 3306,
+            "askForPassword": true,
+            "driver": "MySQL",
+            "name": "Securechatapp",
+            "database": "heroku_e159c57b3a4bcfd",
+            "username": "bb8bdcf73f9d70"
+        }
+    ]
+}
