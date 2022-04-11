@@ -47,4 +47,4 @@ setInterval(()=>{
     }
     xhr.send();
 
-}, 500)
+}, 1000)
