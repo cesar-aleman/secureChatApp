@@ -29,6 +29,7 @@
                             if(move_uploaded_file($tmp_name,"images/".$new_img_name)){
                                 $ran_id = rand(time(), 100000000);
                                 $status = "Active now";
+                                //input validation for password here.
                                 $encrypt_pass = md5($password);
                                 $insert_query = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, img, status)
                                 VALUES ({$ran_id}, '{$fname}','{$lname}', '{$email}', '{$encrypt_pass}', '{$new_img_name}', '{$status}')");
@@ -39,7 +40,7 @@
                                         $_SESSION['unique_id'] = $result['unique_id'];
                                         echo "success";
                                     }else{
-                                        echo "This email address not Exist!";
+                                        echo "This email does address not Exist!";
                                     }
                                 }else{
                                     echo "Something went wrong. Please try again!";
