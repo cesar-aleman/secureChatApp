@@ -27,7 +27,6 @@
                                 </div>';
                 }else{ //else this person is a recipient
                     $output .= '<div class="chat incoming">
-                                    <img src="php/images/'. $row['img'] .'" alt="">
                                         <div class="details">
                                             <p>'. openssl_decrypt($row['msg'], $ciphering, $decryption_key, $options, $decryption_iv) .'</p>
                                         </div>
