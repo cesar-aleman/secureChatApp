@@ -31,10 +31,6 @@
                   <input type="password" name="password" placeholder="Enter new password" required>
                   <i class="fas fa-eye"></i>
                 </div>
-                <div class="field image">
-                  <label>Select Image</label>
-                  <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
-                </div>
                 <div class="field button">
                   <input type="submit" name="submit" value="Continue to Chat">
                 </div>
