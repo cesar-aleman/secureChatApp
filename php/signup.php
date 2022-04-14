@@ -28,7 +28,7 @@
                                 $_SESSION['unique_id'] = $result['unique_id'];
                                 echo "success";
                             }else{
-                                echo "This email does address not Exist!";
+                                echo "This email address does not exist!";
                             }
                         }else{
                             echo "Something went wrong. Please try again!";
