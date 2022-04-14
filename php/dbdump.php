@@ -1,4 +1,4 @@
-//Resource used to create this page: https://www.siteground.com/
+<!-- Resource used to create this page: https://www.siteground.com/ -->
 <?php
     session_start();
     if(isset($_SESSION['unique_id'])){
@@ -8,7 +8,6 @@
         $password = "6eb93168";
         $database = "heroku_e159c57b3a4bcfd";
         $host = "us-cdbr-east-05.cleardb.net";
-
 ?>
         <body>
         <?php 
