@@ -29,7 +29,13 @@
                             if(move_uploaded_file($tmp_name,"images/".$new_img_name)){
                                 $ran_id = rand(time(), 100000000);
                                 $status = "Active now";
-                                if( (strlen($password) >= 9) &&(preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password)) && 
+                                if(strlen($password) >= 9){
+                                    echo "password is the correct length";
+                                }
+                                if(preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password)) {
+                                    echo "password has a special character";
+                                }
+                                if( (strlen($password) >= 9) && (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password)) && 
                                      ctype_upper($password) && (preg_match('/1234567890/', $password)) ) {
                                     //input validation for password here.
                                     $encrypt_pass = md5($password);
