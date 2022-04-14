@@ -1,5 +1,5 @@
 Hello! Thank you for taking the time to view my project. Before I get into some detials I would like to thank Coding Nepal on Youtube for the
-outstanding tutorial that set the ground work for a majority of this project. Almost all of the CSS for this came from that tutorial as well as many other aspects.
+outstanding tutorial that set the ground work for a majority of this project. Almost all of appearence and basic PHP for local connection related development for this came from that tutorial as well as many other aspects.
 My reasoning for this was that we were not being graded on how it looked but rather how secure it was. 
 Again huge thanks to him: https://www.youtube.com/channel/UCk7xIEmd3MeyhIu2StLX5yA
 
