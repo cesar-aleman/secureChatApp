@@ -26,7 +26,6 @@ if (!isset($_SESSION['unique_id'])) {
           </div>
         </div>
         <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a>
-        <a href="php/dump.php" class="logout">SQL Database Dump Button</a>
       </header>
       <div class="search">
         <span class="text">Select a user to start chat</span>
@@ -34,6 +33,9 @@ if (!isset($_SESSION['unique_id'])) {
         <button><i class="fas fa-search"></i></button>
       </div>
       <div class="users-list">
+      </div>
+      <div class="sql-dump">
+      <a href="php/dump.php" class="logout">SQL Database Dump Button</a>
       </div>
     </section>
   </div>
