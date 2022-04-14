@@ -29,14 +29,8 @@
                             if(move_uploaded_file($tmp_name,"images/".$new_img_name)){
                                 $ran_id = rand(time(), 100000000);
                                 $status = "Active now";
-                                if(ctype_upper($password)){
-                                    echo "password has a uppercase letter";
-                                }
-                                if(preg_match('~[0-9]+~', $password)) {
-                                    echo "password has a number character";
-                                }
                                 if( (strlen($password) >= 9) && (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password)) && 
-                                     ctype_upper($password) && (preg_match('/1234567890/', $password)) ) {
+                                    (preg_match('/[A-Z]/', $password)) && (preg_match('~[0-9]+~', $password)) ) {
                                     //input validation for password here.
                                     $encrypt_pass = md5($password);
                                     $insert_query = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, img, status)
