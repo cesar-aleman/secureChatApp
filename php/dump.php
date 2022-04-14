@@ -10,7 +10,7 @@
         // $command = "mysqldump -u $dbuser -h localhost -p$password $dbname > dump.sql 2>&1";
         // exec($command, $output);
 
-        exec("mysqldump -u $dbuser -h $host -p$password $dbname > my_database_dump.sql");
+        exec("mysqldump -u $dbuser -h $host -p$password $dbname > /Users/my_database_dump.sql");
 
         header("location: ../users.php");
     }
