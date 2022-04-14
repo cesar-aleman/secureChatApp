@@ -1,15 +1,14 @@
 <?php
     session_start();
     if(isset($_SESSION['unique_id'])){
-        $database = 'securechatapp';
-        $user = 'root';
-        $pass = '';
-        $host = 'localhost';
-        $dir = dirname(__FILE__) . '/dump.sql';
+        $dbhost = 'localhost:3036';
+        $dbuser = 'root';
+        $dbpass = '';
         
-        echo "<h3>Backing up database to `<code>{$dir}</code>`</h3>";
+        $backup_file = $dbname . date("Y-m-d-H-i-s") . '.gz';
+        $command = "mysqldump --opt -h $dbhost -u $dbuser -p $dbpass ". "test_db | gzip > $backup_file";
         
-        exec("mysqldump --user={$user} --password={$pass} --host={$host} {$database} --result-file={$dir} 2>&1", $output);
+        system($command);
         // exec("mysqldump -u root -p securechatapp > securechatapp.sql");
         header("location: ../users.php");
     }
