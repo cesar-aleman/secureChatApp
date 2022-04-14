@@ -29,21 +29,26 @@
                             if(move_uploaded_file($tmp_name,"images/".$new_img_name)){
                                 $ran_id = rand(time(), 100000000);
                                 $status = "Active now";
-                                //input validation for password here.
-                                $encrypt_pass = md5($password);
-                                $insert_query = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, img, status)
-                                VALUES ({$ran_id}, '{$fname}','{$lname}', '{$email}', '{$encrypt_pass}', '{$new_img_name}', '{$status}')");
-                                if($insert_query){
-                                    $select_sql2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
-                                    if(mysqli_num_rows($select_sql2) > 0){
-                                        $result = mysqli_fetch_assoc($select_sql2);
-                                        $_SESSION['unique_id'] = $result['unique_id'];
-                                        echo "success";
+                                if( (strlen($password) >= 9) || (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password)) || 
+                                     ctype_upper($password) || (preg_match('/1234567890/', $password)) ) {
+                                    //input validation for password here.
+                                    $encrypt_pass = md5($password);
+                                    $insert_query = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, img, status)
+                                    VALUES ({$ran_id}, '{$fname}','{$lname}', '{$email}', '{$encrypt_pass}', '{$new_img_name}', '{$status}')");
+                                    if($insert_query){
+                                        $select_sql2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
+                                        if(mysqli_num_rows($select_sql2) > 0){
+                                            $result = mysqli_fetch_assoc($select_sql2);
+                                            $_SESSION['unique_id'] = $result['unique_id'];
+                                            echo "success";
+                                        }else{
+                                            echo "This email does address not Exist!";
+                                        }
                                     }else{
-                                        echo "This email does address not Exist!";
+                                        echo "Something went wrong. Please try again!";
                                     }
                                 }else{
-                                    echo "Something went wrong. Please try again!";
+                                    echo "Password is not valid. Must contain at least nine characters, an uppercase, a special character, and a number!!";
                                 }
                             }
                         }else{
