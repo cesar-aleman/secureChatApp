@@ -156,17 +156,7 @@ body{
   border-radius: 5px;
   font-size: 17px;
 }
-.users header .dump{
-  display: block;
-  background: #333;
-  color: #fff;
-  outline: none;
-  border: none;
-  padding: 7px 15px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 17px;
-}
+
 .users .search{
   margin: 20px 0;
   display: flex;
@@ -247,7 +237,17 @@ body{
 .users-list a .status-dot.offline{
   color: #ccc;
 }
-
+.sql-dump {
+  display: block;
+  background: #333;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 7px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 17px;
+}
 /* Chat Area CSS Start */
 .chat-area header{
   display: flex;
