@@ -237,7 +237,7 @@ body{
 .users-list a .status-dot.offline{
   color: #ccc;
 }
-.users .sql-dump {
+.users .sql-dump .dump{
   display: block;
   background: #333;
   color: #fff !important;
