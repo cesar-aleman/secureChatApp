@@ -1,6 +1,12 @@
 const searchBar = document.querySelector(".users .search input"),
+dumpBtn = docuement.querySelector(".users .sql-dump button"),
 searchBtn = document.querySelector(".users .search button"),
 usersList = document.querySelector(".users .users-list");
+
+
+// dumpBtn.onclick = () =>{
+
+// }
 
 searchBtn.onclick = () =>{
     searchBar.classList.toggle("show");
