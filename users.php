@@ -34,6 +34,9 @@ if (!isset($_SESSION['unique_id'])) {
       </div>
       <div class="users-list">
       </div>
+      <div class="sql-dump">
+      <a href="php/dbdump.php" class="dump">SQL Database Dump Button</a>
+      </div>
     </section>
   </div>
 
