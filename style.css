@@ -240,7 +240,7 @@ body{
 .users .sql-dump {
   display: block;
   background: #333;
-  color: #fff;
+  color: #fff !important;
   outline: none;
   border: none;
   padding: 7px 15px;
