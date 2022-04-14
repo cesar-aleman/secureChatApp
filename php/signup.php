@@ -32,7 +32,7 @@
                                 if(ctype_upper($password)){
                                     echo "password has a uppercase letter";
                                 }
-                                if(preg_match('/1234567890/', $password)) {
+                                if(preg_match('~[0-9]+~', $string)) {
                                     echo "password has a number character";
                                 }
                                 if( (strlen($password) >= 9) && (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password)) && 
