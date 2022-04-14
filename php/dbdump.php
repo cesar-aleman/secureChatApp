@@ -50,6 +50,6 @@
 <?php
     }
     else {
-        echo "you are not logged in";
+        header("location: ../login.php");
     }
 ?>
